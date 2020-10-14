@@ -1,0 +1,11 @@
+body {
+	background-color: black;
+	text-align: center;
+}
+
+img.thumb {
+	margin: 2vw;
+	max-width: 25vw;
+	max-height: 50vh;
+	vertical-align: middle;
+}
