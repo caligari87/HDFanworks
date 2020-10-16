@@ -3,9 +3,18 @@ body {
 	text-align: center;
 }
 
-img.thumb {
+.thumb {
 	margin: 2vw;
 	max-width: 25vw;
 	max-height: 50vh;
 	vertical-align: middle;
+	display: inline-block;
+}
+
+.vidthumb {
+	margin: 2vw;
+	width: 40vw;
+	height: 25vw;
+	vertical-align: middle;
+	display: inline-block;
 }
