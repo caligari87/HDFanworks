@@ -4,7 +4,13 @@ cd temp/
 
 for F in *.*
 do
-	convert "$F" -format jpg -resize 'x300>' ../thumbs/"${F%%.*}".jpg
+	FT=jpg
+	if [[ $F == *.gif ]]
+	then
+		FT=gif
+		echo "caught gif"
+	fi
+	convert "$F" -format $FT -resize 'x300>' ../thumbs/"${F%%.*}".$FT
 	mv $F ../images
-	echo "<a href=\"images/$F\"><img class=\"thumb\" src=\"thumbs/${F%%.*}.jpg\"></a>"
+	echo "<a href=\"images/$F\"><img class=\"thumb\" src=\"thumbs/${F%%.*}.$FT\"></a>"
 done
